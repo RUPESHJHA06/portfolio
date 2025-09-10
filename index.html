@@ -320,6 +320,10 @@
       position: relative;
       overflow: hidden;
       height: 200px;
+      background: linear-gradient(45deg, #2a2a2a, #1e1e1e);
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
     
     .proj-img { 
@@ -327,6 +331,20 @@
       height: 100%; 
       object-fit: cover; 
       transition: all 0.6s ease;
+    }
+    
+    .proj-placeholder {
+      font-size: 3rem;
+      color: var(--primary);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+    
+    .proj-placeholder span {
+      font-size: 1rem;
+      color: var(--text-secondary);
     }
     
     .proj-card:hover .proj-img { 
@@ -412,41 +430,49 @@
     /* Skills */
     .skills-container {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 2rem;
     }
     
     .skill-category {
       background: var(--accent-bg);
       padding: 1.5rem;
       border-radius: 12px;
+      transition: transform 0.3s;
+    }
+    
+    .skill-category:hover {
+      transform: translateY(-5px);
     }
     
     .skill-category h3 {
       color: var(--secondary);
-      margin-bottom: 1rem;
-      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
+      font-size: 1.3rem;
       display: flex;
       align-items: center;
-      gap: 0.5rem;
+      gap: 0.8rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--primary);
     }
     
     .skills-list { 
-      display: flex; 
-      flex-wrap: wrap; 
-      gap: 0.8rem; 
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+      gap: 1rem; 
     }
     
     .skill-item {
       background: linear-gradient(45deg, var(--card-bg), #2d2d2d);
-      padding: 0.6rem 1rem;
-      border-radius: 20px; 
-      font-size: 0.9rem;
+      padding: 0.8rem 1rem;
+      border-radius: 10px; 
+      font-size: 0.95rem;
       box-shadow: 0 4px 10px rgba(0,0,0,0.3);
       display: flex;
       align-items: center;
-      gap: 0.5rem;
+      gap: 0.7rem;
       transition: all 0.3s;
+      justify-content: flex-start;
     }
     
     .skill-item:hover {
@@ -457,6 +483,17 @@
     
     .skill-item i {
       color: var(--primary);
+      font-size: 1.2rem;
+      width: 24px;
+      text-align: center;
+    }
+    
+    .skill-item.flutter-item {
+      background: linear-gradient(45deg, #02569B, #027DFD);
+    }
+    
+    .skill-item.flutter-item i {
+      color: white;
     }
 
     /* Certifications */
@@ -713,6 +750,8 @@
       background: var(--card-bg);
       margin-top: 4rem;
       border-top: 1px solid #333;
+      position: relative;
+      z-index: 1;
     }
     
     .back-to-top {
@@ -849,6 +888,7 @@
         transition: right 0.3s ease;
         z-index: 1000;
         box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5);
+        padding: 2rem;
       }
       
       .nav-menu.show {
@@ -857,7 +897,19 @@
       
       .nav-menu a {
         font-size: 1.2rem;
-        padding: 0.5rem 1rem;
+        padding: 0.8rem 1.5rem;
+        width: 100%;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 1rem;
+        border-radius: 8px;
+        transition: all 0.3s;
+      }
+      
+      .nav-menu a:hover {
+        background: var(--accent-bg);
       }
       
       .nav-menu a:after {
@@ -872,6 +924,24 @@
       
       .container {
         padding: 0 1rem;
+      }
+      
+      /* Skills section mobile optimization */
+      .skills-container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+      
+      .skills-list {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+      }
+      
+      /* Back to top button positioning */
+      .back-to-top {
+        bottom: 20px;
+        right: 20px;
+        width: 45px;
+        height: 45px;
       }
     }
 
@@ -919,6 +989,10 @@
       
       .contact-container {
         grid-template-columns: 1fr;
+      }
+      
+      .skills-list {
+        grid-template-columns: repeat(2, 1fr);
       }
     }
   </style>
@@ -1017,7 +1091,10 @@
       <div class="proj-gallery">
         <div class="proj-card">
           <div class="proj-img-container">
-            <img src="images/equiti_gold.png" alt="Equiti Gold" class="proj-img"/>
+            <div class="proj-placeholder">
+              <i class="fas fa-coins"></i>
+              <span>Equiti Gold</span>
+            </div>
             <div class="proj-overlay">
               <div class="proj-links">
                 <a href="https://play.google.com/store/apps/details?id=com.equiti.gold.tokenization.app" class="proj-link" target="_blank">
@@ -1041,7 +1118,10 @@
         
         <div class="proj-card">
           <div class="proj-img-container">
-            <img src="images/kotak_neo.png" alt="Kotak Neo" class="proj-img"/>
+            <div class="proj-placeholder">
+              <i class="fas fa-chart-line"></i>
+              <span>Kotak Neo</span>
+            </div>
             <div class="proj-overlay">
               <div class="proj-links">
                 <a href="https://play.google.com/store/apps/details?id=com.kotak.neo" class="proj-link" target="_blank">
@@ -1065,7 +1145,10 @@
         
         <div class="proj-card">
           <div class="proj-img-container">
-            <img src="images/coachbetter.png" alt="CoachBetter" class="proj-img"/>
+            <div class="proj-placeholder">
+              <i class="fas fa-running"></i>
+              <span>CoachBetter</span>
+            </div>
             <div class="proj-overlay">
               <div class="proj-links">
                 <a href="https://play.google.com/store/apps/details?id=com.coachbetter.coachbetter" class="proj-link" target="_blank">
@@ -1096,31 +1179,57 @@
         <div class="skill-category">
           <h3><i class="fas fa-mobile-alt"></i> Mobile Development</h3>
           <div class="skills-list">
-            <div class="skill-item"><i class="fab fa-flutter"></i> Flutter</div>
-            <div class="skill-item"><i class="fas fa-code"></i> Dart</div>
-            <div class="skill-item"><i class="fas fa-cube"></i> BLoC</div>
-            <div class="skill-item"><i class="fas fa-tools"></i> Provider</div>
+            <div class="skill-item flutter-item">
+              <i class="fab fa-flutter"></i> Flutter
+            </div>
+            <div class="skill-item">
+              <i class="fas fa-code"></i> Dart
+            </div>
+            <div class="skill-item">
+              <i class="fas fa-cube"></i> BLoC
+            </div>
+            <div class="skill-item">
+              <i class="fas fa-tools"></i> Provider
+            </div>
           </div>
         </div>
         
         <div class="skill-category">
           <h3><i class="fas fa-database"></i> Backend & Storage</h3>
           <div class="skills-list">
-            <div class="skill-item"><i class="fas fa-server"></i> REST APIs</div>
-            <div class="skill-item"><i class="fas fa-fire"></i> Firebase</div>
-            <div class="skill-item"><i class="fas fa-database"></i> Hive</div>
-            <div class="skill-item"><i class="fas fa-box"></i> ObjectBox</div>
+            <div class="skill-item">
+              <i class="fas fa-server"></i> REST APIs
+            </div>
+            <div class="skill-item">
+              <i class="fas fa-fire"></i> Firebase
+            </div>
+            <div class="skill-item">
+              <i class="fas fa-database"></i> Hive
+            </div>
+            <div class="skill-item">
+              <i class="fas fa-box"></i> ObjectBox
+            </div>
           </div>
         </div>
         
         <div class="skill-category">
           <h3><i class="fas fa-wrench"></i> Tools & Practices</h3>
           <div class="skills-list">
-            <div class="skill-item"><i class="fas fa-cogs"></i> CI/CD</div>
-            <div class="skill-item"><i class="fas fa-rocket"></i> App Deployment</div>
-            <div class="skill-item"><i class="fas fa-lock"></i> Secure Storage</div>
-            <div class="skill-item"><i class="fas fa-map"></i> Google Maps</div>
-            <div class="skill-item"><i class="fas fa-vial"></i> Unit & Widget Testing</div>
+            <div class="skill-item">
+              <i class="fas fa-cogs"></i> CI/CD
+            </div>
+            <div class="skill-item">
+              <i class="fas fa-rocket"></i> App Deployment
+            </div>
+            <div class="skill-item">
+              <i class="fas fa-lock"></i> Secure Storage
+            </div>
+            <div class="skill-item">
+              <i class="fas fa-map"></i> Google Maps
+            </div>
+            <div class="skill-item">
+              <i class="fas fa-vial"></i> Unit & Widget Testing
+            </div>
           </div>
         </div>
       </div>
