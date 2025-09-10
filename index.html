@@ -5,7 +5,7 @@
   <title>Rupesh Jha | Senior Flutter Developer Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Senior Flutter Developer with 8+ years of experience building high-performance mobile applications for Android and iOS.">
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -1172,34 +1172,33 @@
       </div>
     </section>
 
-<!-- Skills -->
-<section id="skills">
-  <h2><i class="fas fa-cogs"></i> Skills</h2>
-  <div class="skills-container">
-    <div class="skill-category">
-      <h3><i class="fas fa-mobile-alt"></i> Mobile Development</h3>
-      <div class="skills-list">
-        <!-- Flutter with custom icon -->
-        <div class="skill-item">
-          <i class="fas fa-mobile" style="color: #02569B;"></i> Flutter
+    <!-- Skills -->
+    <section id="skills">
+      <h2><i class="fas fa-cogs"></i> Skills</h2>
+      <div class="skills-container">
+        <div class="skill-category">
+          <h3><i class="fas fa-mobile-alt"></i> Mobile Development</h3>
+          <div class="skills-list">
+            <div class="skill-item">
+              <i class="fab fa-flutter"></i> Flutter
+            </div>
+            <div class="skill-item">
+              <i class="fas fa-code"></i> Dart
+            </div>
+            <div class="skill-item">
+              <i class="fab fa-apple"></i> iOS
+            </div>
+            <div class="skill-item">
+              <i class="fab fa-android"></i> Android
+            </div>
+            <div class="skill-item">
+              <i class="fas fa-cube"></i> BLoC
+            </div>
+            <div class="skill-item">
+              <i class="fas fa-tools"></i> Provider
+            </div>
+          </div>
         </div>
-        <div class="skill-item">
-          <i class="fas fa-code"></i> Dart
-        </div>
-        <div class="skill-item">
-          <i class="fab fa-apple"></i> iOS
-        </div>
-        <div class="skill-item">
-          <i class="fab fa-android"></i> Android
-        </div>
-        <div class="skill-item">
-          <i class="fas fa-cube"></i> BLoC
-        </div>
-        <div class="skill-item">
-          <i class="fas fa-tools"></i> Provider
-        </div>
-      </div>
-    </div>
         
         <div class="skill-category">
           <h3><i class="fas fa-database"></i> Backend & Storage</h3>
@@ -1519,146 +1518,97 @@
         icon.classList.add('fa-bars');
       });
     });
-    <script>
-  // Project modal
-  const projectModal = document.getElementById('projectModal');
-  const modalClose = document.getElementById('modalClose');
-  const modalBody = document.getElementById('modalBody');
-  
-  // Project details data
-  const projectDetails = {
-    'Equiti Gold': {
-      description: 'Gold investment platform enabling users to buy, sell, and manage digital gold investments with secure transactions and real-time pricing.',
-      technologies: ['Flutter', 'Dart', 'BLoC', 'Firebase', 'REST API', 'Biometric Auth'],
-      features: [
-        'Secure gold tokenization and digital ownership',
-        'Real-time gold price tracking and alerts',
-        'Biometric authentication for secure access',
-        'Instant buy/sell transactions with multiple payment options',
-        'Portfolio tracking and investment insights'
-      ],
-      stats: {
-        downloads: '50K+',
-        rating: '4.8'
-      }
-    },
-    'Kotak Neo': {
-      description: 'Comprehensive stock trading platform offering seamless equity trading, investment tracking, and market analysis tools for retail investors.',
-      technologies: ['Flutter', 'Dart', 'Provider', 'WebSocket', 'Secure Storage', 'REST API'],
-      features: [
-        'Real-time stock market data and charts',
-        'One-tap trading with multiple order types',
-        'Portfolio management with P&L tracking',
-        'Secure transaction processing with encryption',
-        'Personalized watchlists and market alerts'
-      ],
-      stats: {
-        downloads: '5M+',
-        rating: '4.5'
-      }
-    },
-    'CoachBetter': {
-      description: 'Sports coaching platform that helps coaches create training sessions, analyze performance, and communicate with their athletes.',
-      technologies: ['Flutter', 'Dart', 'BLoC', 'Firebase', 'Google Maps', 'Video Streaming'],
-      features: [
-        'Custom training session planning and scheduling',
-        'Player performance analytics and statistics',
-        'Video analysis with drawing tools and annotations',
-        'Team communication and messaging system',
-        'Practice drill library with demonstrations'
-      ],
-      stats: {
-        downloads: '10K+',
-        rating: '4.7'
-      }
-    }
-  };
 
-  document.querySelectorAll('.proj-card').forEach(card => {
-    card.addEventListener('click', () => {
-      const title = card.querySelector('h3').textContent;
-      const description = card.querySelector('p').textContent;
-      const stats = card.querySelector('.proj-stats').innerHTML;
-      const links = card.querySelector('.proj-links').innerHTML;
-      
-      const project = projectDetails[title];
-      
-      modalBody.innerHTML = `
-        <h2 style="color: var(--primary); margin-bottom: 1rem;">${title}</h2>
-        <p style="margin-bottom: 1.5rem; color: var(--text-secondary);">${project.description}</p>
-        <div style="display: flex; gap: 1rem; margin-bottom: 1.5rem;">${stats}</div>
-        <div style="margin-bottom: 2rem;">
-          <h3 style="color: var(--secondary); margin-bottom: 1rem;">App Links</h3>
-          <div style="display: flex; gap: 1rem;">${links}</div>
-        </div>
-        <h3 style="color: var(--secondary); margin-bottom: 1rem;">Technologies Used</h3>
-        <div style="display: flex; flex-wrap: wrap; gap: 0.8rem; margin-bottom: 2rem;">
-          ${project.technologies.map(tech => `<div class="skill-item">${tech}</div>`).join('')}
-        </div>
-        <h3 style="color: var(--secondary); margin-bottom: 1rem;">Key Features</h3>
-        <ul style="padding-left: 1.5rem; color: var(--text-secondary);">
-          ${project.features.map(feature => `<li>${feature}</li>`).join('')}
-        </ul>
-      `;
-      
-      projectModal.classList.add('open');
-      document.body.style.overflow = 'hidden';
+    // Project modal
+    const projectModal = document.getElementById('projectModal');
+    const modalClose = document.getElementById('modalClose');
+    const modalBody = document.getElementById('modalBody');
+    
+    // Project details data
+    const projectDetails = {
+      'Equiti Gold': {
+        description: 'Gold investment platform enabling users to buy, sell, and manage digital gold investments with secure transactions and real-time pricing.',
+        technologies: ['Flutter', 'Dart', 'BLoC', 'Firebase', 'REST API', 'Biometric Auth'],
+        features: [
+          'Secure gold tokenization and digital ownership',
+          'Real-time gold price tracking and alerts',
+          'Biometric authentication for secure access',
+          'Instant buy/sell transactions with multiple payment options',
+          'Portfolio tracking and investment insights'
+        ],
+        stats: {
+          downloads: '50K+',
+          rating: '4.8'
+        }
+      },
+      'Kotak Neo': {
+        description: 'Comprehensive stock trading platform offering seamless equity trading, investment tracking, and market analysis tools for retail investors.',
+        technologies: ['Flutter', 'Dart', 'Provider', 'WebSocket', 'Secure Storage', 'REST API'],
+        features: [
+          'Real-time stock market data and charts',
+          'One-tap trading with multiple order types',
+          'Portfolio management with P&L tracking',
+          'Secure transaction processing with encryption',
+          'Personalized watchlists and market alerts'
+        ],
+        stats: {
+          downloads: '5M+',
+          rating: '4.5'
+        }
+      },
+      'CoachBetter': {
+        description: 'Sports coaching platform that helps coaches create training sessions, analyze performance, and communicate with their athletes.',
+        technologies: ['Flutter', 'Dart', 'BLoC', 'Firebase', 'Google Maps', 'Video Streaming'],
+        features: [
+          'Custom training session planning and scheduling',
+          'Player performance analytics and statistics',
+          'Video analysis with drawing tools and annotations',
+          'Team communication and messaging system',
+          'Practice drill library with demonstrations'
+        ],
+        stats: {
+          downloads: '10K+',
+          rating: '4.7'
+        }
+      }
+    };
+
+    document.querySelectorAll('.proj-card').forEach(card => {
+      card.addEventListener('click', () => {
+        const title = card.querySelector('h3').textContent;
+        const description = card.querySelector('p').textContent;
+        const stats = card.querySelector('.proj-stats').innerHTML;
+        const links = card.querySelector('.proj-links').innerHTML;
+        
+        const project = projectDetails[title];
+        
+        modalBody.innerHTML = `
+          <h2 style="color: var(--primary); margin-bottom: 1rem;">${title}</h2>
+          <p style="margin-bottom: 1.5rem; color: var(--text-secondary);">${project.description}</p>
+          <div style="display: flex; gap: 1rem; margin-bottom: 1.5rem;">${stats}</div>
+          <div style="margin-bottom: 2rem;">
+            <h3 style="color: var(--secondary); margin-bottom: 1rem;">App Links</h3>
+            <div style="display: flex; gap: 1rem;">${links}</div>
+          </div>
+          <h3 style="color: var(--secondary); margin-bottom: 1rem;">Technologies Used</h3>
+          <div style="display: flex; flex-wrap: wrap; gap: 0.8rem; margin-bottom: 2rem;">
+            ${project.technologies.map(tech => `<div class="skill-item">${tech}</div>`).join('')}
+          </div>
+          <h3 style="color: var(--secondary); margin-bottom: 1rem;">Key Features</h3>
+          <ul style="padding-left: 1.5rem; color: var(--text-secondary);">
+            ${project.features.map(feature => `<li>${feature}</li>`).join('')}
+          </ul>
+        `;
+        
+        projectModal.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      });
     });
-  });
-  
-  modalClose.addEventListener('click', () => {
-    projectModal.classList.remove('open');
-    document.body.style.overflow = 'auto';
-  });
-</script>
-
-    // // Project modal
-    // const projectModal = document.getElementById('projectModal');
-    // const modalClose = document.getElementById('modalClose');
-    // const modalBody = document.getElementById('modalBody');
     
-    // document.querySelectorAll('.proj-card').forEach(card => {
-    //   card.addEventListener('click', () => {
-    //     const title = card.querySelector('h3').textContent;
-    //     const description = card.querySelector('p').textContent;
-    //     const stats = card.querySelector('.proj-stats').innerHTML;
-    //     const links = card.querySelector('.proj-links').innerHTML;
-        
-    //     modalBody.innerHTML = `
-    //       <h2 style="color: var(--primary); margin-bottom: 1rem;">${title}</h2>
-    //       <p style="margin-bottom: 1.5rem; color: var(--text-secondary);">${description}</p>
-    //       <div style="display: flex; gap: 1rem; margin-bottom: 1.5rem;">${stats}</div>
-    //       <div style="margin-bottom: 2rem;">
-    //         <h3 style="color: var(--secondary); margin-bottom: 1rem;">App Links</h3>
-    //         <div style="display: flex; gap: 1rem;">${links}</div>
-    //       </div>
-    //       <h3 style="color: var(--secondary); margin-bottom: 1rem;">Technologies Used</h3>
-    //       <div style="display: flex; flex-wrap: wrap; gap: 0.8rem; margin-bottom: 2rem;">
-    //         <div class="skill-item">Flutter</div>
-    //         <div class="skill-item">Dart</div>
-    //         <div class="skill-item">BLoC</div>
-    //         <div class="skill-item">Firebase</div>
-    //         <div class="skill-item">REST API</div>
-    //       </div>
-    //       <h3 style="color: var(--secondary); margin-bottom: 1rem;">Key Features</h3>
-    //       <ul style="padding-left: 1.5rem; color: var(--text-secondary);">
-    //         <li>Secure authentication with biometric login</li>
-    //         <li>Real-time data synchronization</li>
-    //         <li>Offline functionality</li>
-    //         <li>Responsive UI for all screen sizes</li>
-    //         <li>Advanced analytics integration</li>
-    //       </ul>
-    //     `;
-        
-    //     projectModal.classList.add('open');
-    //     document.body.style.overflow = 'hidden';
-    //   });
-    // });
-    
-    // modalClose.addEventListener('click', () => {
-    //   projectModal.classList.remove('open');
-    //   document.body.style.overflow = 'auto';
-    // });
+    modalClose.addEventListener('click', () => {
+      projectModal.classList.remove('open');
+      document.body.style.overflow = 'auto';
+    });
 
     // Contact form handling for Formspree
     const contactForm = document.getElementById('contactForm');
