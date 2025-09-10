@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Senior Flutter Developer with 8+ years of experience building high-performance mobile applications for Android and iOS.">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -161,7 +160,7 @@
     }
     
     .btn {
-      padding: 极客 1.5rem;
+      padding: 0.8rem 1.5rem;
       border-radius: 50px;
       text-decoration: none;
       font-weight: 600;
@@ -194,7 +193,7 @@
       background: var(--primary);
       color: #121212;
       transform: translateY(-3px);
-      box-shadow: 0 10px 20px rgba(144, 202, 249, 极客.3);
+      box-shadow: 0 10px 20px rgba(144, 202, 249, 0.3);
     }
 
     /* Sections */
@@ -223,7 +222,7 @@
       top: 0;
       left: 0;
       width: 5px;
-     极客 height: 100%;
+      height: 100%;
       background: linear-gradient(to bottom, var(--primary), var(--secondary));
     }
     
@@ -312,7 +311,7 @@
       height: 100%;
     }
     
-    .极客-card:hover { 
+    .proj-card:hover { 
       transform: translateY(-10px); 
       box-shadow: 0 15px 30px rgba(144,202,249,0.4); 
     }
@@ -408,7 +407,7 @@
     }
     
     .proj-card p {
-     极客 color: var(--text-secondary);
+      color: var(--text-secondary);
       margin-bottom: 1.2rem;
       flex-grow: 1;
     }
@@ -459,7 +458,7 @@
     
     .skills-list { 
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
       gap: 1rem; 
     }
     
@@ -482,21 +481,19 @@
       background: linear-gradient(45deg, #2d2d2d, var(--card-bg));
     }
     
-    .skill-icon {
-      width: 24px;
-      height: 24px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.2rem;
-    }
-    
-    .skill-icon i {
+    .skill-item i {
       color: var(--primary);
+      font-size: 1.2rem;
+      width: 24px;
+      text-align: center;
     }
     
-    .skill-icon.svg-icon {
-      filter: brightness(0) saturate(100%) invert(76%) sepia(29%) saturate(638%) hue-rotate(179deg) brightness(99%) contrast(91%);
+    .skill-item.flutter-item {
+      background: linear-gradient(45deg, #02569B, #027DFD);
+    }
+    
+    .skill-item.flutter-item i {
+      color: white;
     }
 
     /* Certifications */
@@ -510,7 +507,7 @@
       background: var(--accent-bg);
       padding: 1.5rem;
       border-radius: 12px;
-      transition: transform 极客.3s;
+      transition: transform 0.3s;
     }
     
     .cert-card:hover {
@@ -538,7 +535,7 @@
     /* Education */
     .edu-timeline {
       position: relative;
-     极客 max-width: 800px;
+      max-width: 800px;
       margin: 0 auto;
     }
     
@@ -585,7 +582,7 @@
     }
     
     .edu-item span {
-      color:极客 var(--secondary);
+      color: var(--secondary);
       font-size: 0.9rem;
     }
 
@@ -633,8 +630,8 @@
       font-size: 1.1rem;
     }
     
-    .contact-details a, .contact极客-details p {
-      color:极客 var(--text-secondary);
+    .contact-details a, .contact-details p {
+      color: var(--text-secondary);
       text-decoration: none;
       transition: color 0.3s;
     }
@@ -687,7 +684,7 @@
       padding: 0.8rem 1rem;
       border-radius: 8px;
       border: 1px solid #444;
-      background: var(--card极客-bg);
+      background: var(--card-bg);
       color: var(--text-primary);
       font-family: inherit;
       transition: all 0.3s;
@@ -798,7 +795,7 @@
       background: rgba(0,0,0,0.8);
       display: flex;
       align-items: center;
-     极客 justify-content: center;
+      justify-content: center;
       z-index: 2000;
       opacity: 0;
       visibility: hidden;
@@ -825,11 +822,11 @@
       transform: scale(1);
     }
     
-    .modal-极客close {
+    .modal-close {
       position: absolute;
       top: 20px;
       right: 20px;
-      background: var(--accent极客-bg);
+      background: var(--accent-bg);
       width: 40px;
       height: 40px;
       border-radius: 50%;
@@ -981,7 +978,7 @@
         padding: 1rem;
       }
       
-      .job h极客3 {
+      .job h3 {
         font-size: 1.1rem;
       }
       
@@ -1006,7 +1003,7 @@
 
   <!-- Navigation -->
   <nav id="navbar">
-    <button class="nav-toggle" id极客="navToggle">
+    <button class="nav-toggle" id="navToggle">
       <i class="fas fa-bars"></i>
     </button>
     <div class="nav-menu" id="navMenu">
@@ -1015,7 +1012,7 @@
       <a href="#projects"><i class="fas fa-code"></i> Projects</a>
       <a href="#skills"><i class="fas fa-cogs"></i> Skills</a>
       <a href="#certifications"><i class="fas fa-certificate"></i> Certifications</a>
-      <a href="#education"><极客i class="fas fa-graduation-cap"></i> Education</a>
+      <a href="#education"><i class="fas fa-graduation-cap"></i> Education</a>
       <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
     </div>
   </nav>
@@ -1044,17 +1041,17 @@
           <div style="font-size: 2.5rem; font-weight: bold; color: var(--primary);">8+</div>
           <div style="color: var(--text-secondary);">Years Experience</div>
         </div>
-        <div style="text-align: center; flex: 1;极客 min-width: 130px;">
+        <div style="text-align: center; flex: 1; min-width: 130px;">
           <div style="font-size: 2.5rem; font-weight: bold; color: var(--primary);">5M+</div>
           <div style="color: var(--text-secondary);">App Downloads</div>
-       极客</div>
+        </div>
         <div style="text-align: center; flex: 1; min-width: 130px;">
           <div style="font-size: 2.5rem; font-weight: bold; color: var(--primary);">10+</div>
           <div style="color: var(--text-secondary);">Projects Delivered</div>
         </div>
         <div style="text-align: center; flex: 1; min-width: 130px;">
           <div style="font-size: 2.5rem; font-weight: bold; color: var(--primary);">3</div>
-          <div style="color: var(--text-secondary);">Companies Worked</极客div>
+          <div style="color: var(--text-secondary);">Companies Worked</div>
         </div>
       </div>
     </section>
@@ -1072,7 +1069,7 @@
       <div class="job">
         <h3>Senior Software Engineer – CarDekho (Girnarsoft), Gurgaon</h3>
         <span>Jan 2022 – Feb 2023</span>
-        <极客p>Delivered internal Retail App for 1,000+ associates, improving efficiency by 40%. Built secure dashboards, workflows, and optimized performance with BLoC state management.</p>
+        <p>Delivered internal Retail App for 1,000+ associates, improving efficiency by 40%. Built secure dashboards, workflows, and optimized performance with BLoC state management.</p>
       </div>
 
       <div class="job">
@@ -1100,11 +1097,11 @@
             </div>
             <div class="proj-overlay">
               <div class="proj-links">
-                <a href="https://play.google.com/store/apps/details?id=com.e极客uiti.gold.tokenization.app" class="proj-link" target="_blank">
+                <a href="https://play.google.com/store/apps/details?id=com.equiti.gold.tokenization.app" class="proj-link" target="_blank">
                   <i class="fab fa-android"></i>
                 </a>
                 <a href="https://apps.apple.com/in/app/equiti-gold/id6474134526" class="proj-link" target="_blank">
-                  <i class="fab fa-apple"></极客i>
+                  <i class="fab fa-apple"></i>
                 </a>
               </div>
             </div>
@@ -1126,11 +1123,11 @@
               <span>Kotak Neo</span>
             </div>
             <div class="proj-overlay">
-              <div class="proj极客-links">
+              <div class="proj-links">
                 <a href="https://play.google.com/store/apps/details?id=com.kotak.neo" class="proj-link" target="_blank">
                   <i class="fab fa-android"></i>
                 </a>
-                <a href="极客https://apps.apple.com/in/app/kotak-neo-stock-market-trading/id1553056779" class="proj-link" target="_blank">
+                <a href="https://apps.apple.com/in/app/kotak-neo-stock-market-trading/id1553056779" class="proj-link" target="_blank">
                   <i class="fab fa-apple"></i>
                 </a>
               </div>
@@ -1165,9 +1162,9 @@
           </div>
           <div>
             <h3>CoachBetter</h3>
-            <p>Sports coaching platform with training modules and performance tracking.</极客p>
+            <p>Sports coaching platform with training modules and performance tracking.</p>
             <div class="proj-stats">
-              <span class="proj-stat"><极客i class="fas fa-download"></i> 10K+</span>
+              <span class="proj-stat"><i class="fas fa-download"></i> 10K+</span>
               <span class="proj-stat"><i class="fas fa-star"></i> 4.7</span>
             </div>
           </div>
@@ -1182,29 +1179,17 @@
         <div class="skill-category">
           <h3><i class="fas fa-mobile-alt"></i> Mobile Development</h3>
           <div class="skills-list">
-            <div class="skill-item">
-              <div class="skill-icon">
-                <i class="fab fa-flutter"></i>
-              </div>
-              Flutter
+            <div class="skill-item flutter-item">
+              <i class="fab fa-flutter"></i> Flutter
             </div>
             <div class="skill-item">
-              <div class="skill-icon">
-                <i class="fab fa-dart"></i>
-              </div>
-              Dart
+              <i class="fas fa-code"></i> Dart
             </div>
             <div class="skill-item">
-              <div class="skill-icon">
-                <i class="fas fa-cube"></i>
-              </div>
-              BLoC
+              <i class="fas fa-cube"></i> BLoC
             </div>
             <div class="skill-item">
-              <div class="skill-icon">
-                <i class="fas fa-tools"></i>
-              </div>
-              Provider
+              <i class="fas fa-tools"></i> Provider
             </div>
           </div>
         </div>
@@ -1213,28 +1198,16 @@
           <h3><i class="fas fa-database"></i> Backend & Storage</h3>
           <div class="skills-list">
             <div class="skill-item">
-              <div class="skill-icon">
-                <i class="fas fa-server"></i>
-              </div>
-              REST APIs
+              <i class="fas fa-server"></i> REST APIs
             </div>
             <div class="skill-item">
-              <div class="skill-icon">
-                <i class="fas fa-fire"></i>
-              </div>
-              Firebase
+              <i class="fas fa-fire"></i> Firebase
             </div>
             <div class="skill-item">
-              <div class="skill-icon">
-                <i class="fas fa-database"></i>
-              </div>
-              Hive
+              <i class="fas fa-database"></i> Hive
             </div>
             <div class="skill-item">
-              <div class="skill-icon">
-                <i class="fas fa-box"></i>
-              </div>
-              ObjectBox
+              <i class="fas fa-box"></i> ObjectBox
             </div>
           </div>
         </div>
@@ -1243,34 +1216,19 @@
           <h3><i class="fas fa-wrench"></i> Tools & Practices</h3>
           <div class="skills-list">
             <div class="skill-item">
-              <div class="skill-icon">
-                <i class="fas fa-cogs"></i>
-              </div>
-              CI/CD
+              <i class="fas fa-cogs"></i> CI/CD
             </div>
             <div class="skill-item">
-              <div class="skill-icon">
-                <i class="fas fa-rocket"></i>
-              </div>
-              App Deployment
+              <i class="fas fa-rocket"></i> App Deployment
             </div>
             <div class="skill-item">
-              <div class="skill-icon">
-                <i class="fas fa-lock"></i>
-              </div>
-              Secure Storage
+              <i class="fas fa-lock"></i> Secure Storage
             </div>
             <div class="skill-item">
-              <div class="skill-icon">
-                <i class="fas fa-map"></i>
-              </div>
-              Google Maps
+              <i class="fas fa-map"></i> Google Maps
             </div>
             <div class="skill-item">
-              <div class="skill-icon">
-                <i class="fas fa-vial"></i>
-              </div>
-              Unit & Widget Testing
+              <i class="fas fa-vial"></i> Unit & Widget Testing
             </div>
           </div>
         </div>
@@ -1288,7 +1246,7 @@
         </div>
         
         <div class="cert-card">
-          <h3>Mentor – INCUBATE IND</极客h3>
+          <h3>Mentor – INCUBATE IND</h3>
           <p>Mentored aspiring Flutter developers in this incubation program</p>
           <span>INCUBATE IND • 2021</span>
         </div>
@@ -1313,14 +1271,14 @@
       <div class="edu-timeline">
         <div class="edu-item">
           <div class="edu-icon">
-            <i class="fas fa-graduation-cap"></极客i>
+            <i class="fas fa-graduation-cap"></i>
           </div>
           <h3>B.Tech, Computer Science & Engineering</h3>
           <p>Manav Rachna College</p>
           <span>2013 – 2017</span>
         </div>
         
-        <极客div class="edu-item">
+        <div class="edu-item">
           <div class="edu-icon">
             <i class="fas fa-school"></i>
           </div>
@@ -1534,7 +1492,7 @@
     navToggle.addEventListener('click', () => {
       navMenu.classList.toggle('show');
       
-      // Change icon based极客 on menu state
+      // Change icon based on menu state
       const icon = navToggle.querySelector('i');
       if (navMenu.classList.contains('show')) {
         icon.classList.remove('fa-bars');
@@ -1580,7 +1538,7 @@
             <div class="skill-item">Flutter</div>
             <div class="skill-item">Dart</div>
             <div class="skill-item">BLoC</div>
-            <div class极客="skill-item">Firebase</div>
+            <div class="skill-item">Firebase</div>
             <div class="skill-item">REST API</div>
           </div>
           <h3 style="color: var(--secondary); margin-bottom: 1rem;">Key Features</h3>
