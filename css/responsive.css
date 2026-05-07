@@ -1,0 +1,132 @@
+/* Mobile Menu Styles */
+@media (max-width: 768px) {
+  nav {
+    justify-content: flex-end;
+    padding: 1rem;
+  }
+  
+  .nav-toggle {
+    display: block;
+  }
+  
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: -80%;
+    width: 80%;
+    height: 100vh;
+    background: var(--card-bg);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    transition: right 0.3s ease;
+    z-index: 1000;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+  }
+  
+  .nav-menu.show {
+    right: 0;
+  }
+  
+  .nav-menu a {
+    font-size: 1.2rem;
+    padding: 0.8rem 1.5rem;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+    border-radius: 8px;
+    transition: all 0.3s;
+  }
+  
+  .nav-menu a:hover {
+    background: var(--accent-bg);
+  }
+  
+  .nav-menu a:after {
+    display: none;
+  }
+  
+  /* Increased spacing between sections on mobile */
+  section {
+    margin: 3.5rem 0;
+    padding: 1.8rem;
+  }
+  
+  .container {
+    padding: 0 1rem;
+  }
+  
+  /* Skills section mobile optimization */
+  .skills-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .skills-list {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  }
+  
+  /* Back to top button positioning */
+  .back-to-top {
+    bottom: 20px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .proj-gallery {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+}
+
+@media (max-width: 576px) {
+  .profile-pic {
+    width: 130px;
+    height: 130px;
+  }
+  
+  h1 {
+    font-size: 1.8rem;
+  }
+  
+  header p {
+    font-size: 1rem;
+  }
+  
+  section h2 {
+    font-size: 1.6rem;
+  }
+  
+  .proj-gallery {
+    grid-template-columns: 1fr;
+  }
+  
+  .job {
+    padding: 1rem;
+  }
+  
+  .job h3 {
+    font-size: 1.1rem;
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .skills-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
