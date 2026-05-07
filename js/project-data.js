@@ -25,8 +25,8 @@ const projectDetails = {
       'Personalized watchlists and market alerts'
     ],
     stats: {
-      downloads: '5M+',
-      rating: '4.5'
+      downloads: '10M+',
+      rating: '4.4'
     }
   },
   'CoachBetter': {
