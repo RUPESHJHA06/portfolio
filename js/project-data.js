@@ -1,11 +1,11 @@
 const projectDetails = {
   'Equiti Gold': {
     icon: 'fas fa-coins',
-    shortDescription: 'AI-ready fintech platform with real-time gold pricing, secure transactions, analytics tracking, and scalable Flutter architecture.',
+    shortDescription: 'Intelligence-ready fintech platform with real-time gold pricing, secure transactions, analytics tracking, and scalable Flutter architecture.',
     description: 'Gold investment platform enabling users to buy, sell, and manage digital gold investments with secure transactions and real-time pricing.',
     role: 'Led Flutter development across core investment journeys, secure transaction flows, analytics instrumentation, and production stability improvements.',
     technologies: ['Flutter', 'Dart', 'BLoC', 'Firebase', 'REST API', 'WebSocket', 'Biometric Auth'],
-    badges: ['AI-ready', 'Fintech', 'Live Pricing'],
+    badges: ['Analytics-ready', 'Fintech', 'Live Pricing'],
     features: [
       'Secure gold tokenization and digital ownership',
       'Real-time gold price tracking and alerts using WebSocket updates',

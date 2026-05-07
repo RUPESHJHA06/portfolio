@@ -136,7 +136,7 @@ const renderBadges = (badges) => badges
   .map(badge => `<span class="project-badge">${escapeHtml(badge)}</span>`)
   .join('');
 
-const renderAppLinks = (project, title) => `
+const renderAppLinks = (project, title, showLabels = false) => `
   <a
     href="${escapeHtml(project.links.android)}"
     class="proj-link"
@@ -145,6 +145,7 @@ const renderAppLinks = (project, title) => `
     aria-label="${escapeHtml(title)} Android app"
   >
     <i class="fab fa-android"></i>
+    ${showLabels ? '<span>Android App</span>' : ''}
   </a>
   <a
     href="${escapeHtml(project.links.ios)}"
@@ -154,12 +155,19 @@ const renderAppLinks = (project, title) => `
     aria-label="${escapeHtml(title)} iOS app"
   >
     <i class="fab fa-apple"></i>
+    ${showLabels ? '<span>iOS App</span>' : ''}
   </a>
 `;
 
 const renderProjectCards = () => {
   projectGallery.innerHTML = Object.entries(projectDetails).map(([title, project]) => `
-    <div class="proj-card" role="button" tabindex="0" data-project-title="${escapeHtml(title)}">
+    <div
+      class="proj-card"
+      role="button"
+      tabindex="0"
+      data-project-title="${escapeHtml(title)}"
+      aria-label="View ${escapeHtml(title)} project details"
+    >
       <div class="proj-img-container">
         <div class="project-badges">${renderBadges(project.badges)}</div>
         <div class="proj-placeholder">
@@ -176,6 +184,10 @@ const renderProjectCards = () => {
         <div class="proj-stats">
           <span class="proj-stat"><i class="fas fa-download"></i> ${escapeHtml(project.stats.downloads)}</span>
           <span class="proj-stat"><i class="fas fa-star"></i> ${escapeHtml(project.stats.rating)}</span>
+        </div>
+        <div class="project-action">
+          <span>View details</span>
+          <i class="fas fa-arrow-right"></i>
         </div>
       </div>
     </div>
@@ -202,8 +214,16 @@ const openProjectModal = (title) => {
   ` : '';
 
   modalBody.innerHTML = `
-    <h2 class="modal-title" id="projectModalTitle">${escapeHtml(title)}</h2>
-    <p class="modal-description">${escapeHtml(project.description)}</p>
+    <div class="modal-header">
+      <div class="modal-icon">
+        <i class="${escapeHtml(project.icon)}"></i>
+      </div>
+      <div>
+        <div class="modal-badges">${renderBadges(project.badges)}</div>
+        <h2 class="modal-title" id="projectModalTitle">${escapeHtml(title)}</h2>
+        <p class="modal-description">${escapeHtml(project.description)}</p>
+      </div>
+    </div>
     <div class="modal-stats">
       <span class="proj-stat"><i class="fas fa-download"></i> ${escapeHtml(project.stats.downloads)}</span>
       <span class="proj-stat"><i class="fas fa-star"></i> ${escapeHtml(project.stats.rating)}</span>
@@ -223,7 +243,7 @@ const openProjectModal = (title) => {
     </div>
     <div class="modal-section">
       <h3 class="modal-section-title">App Links</h3>
-      <div class="modal-links">${renderAppLinks(project, title)}</div>
+      <div class="modal-links">${renderAppLinks(project, title, true)}</div>
     </div>
     <h3 class="modal-section-title">Technologies Used</h3>
     <div class="modal-tech-list">
