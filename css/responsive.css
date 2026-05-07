@@ -66,9 +66,17 @@
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
+
+  .hero-tags {
+    gap: 0.6rem;
+  }
   
   .skills-list {
     grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  }
+
+  .ai-skill-category .skills-list {
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
   }
   
   /* Back to top button positioning */
@@ -100,6 +108,11 @@
   header p {
     font-size: 1rem;
   }
+
+  .hero-tags span {
+    font-size: 0.85rem;
+    padding: 0.5rem 0.7rem;
+  }
   
   section h2 {
     font-size: 1.6rem;
@@ -128,5 +141,9 @@
   
   .skills-list {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .ai-skill-category .skills-list {
+    grid-template-columns: 1fr;
   }
 }

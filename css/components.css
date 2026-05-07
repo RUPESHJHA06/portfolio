@@ -97,10 +97,16 @@
   box-shadow: 0 15px 30px rgba(144,202,249,0.4); 
 }
 
+.proj-card:focus-visible {
+  outline: 3px solid var(--secondary);
+  outline-offset: 4px;
+}
+
 .proj-img-container {
   position: relative;
   overflow: hidden;
   height: 200px;
+  padding-top: 3.2rem;
   background: linear-gradient(45deg, #2a2a2a, #1e1e1e);
   display: flex;
   align-items: center;
@@ -126,6 +132,31 @@
 .proj-placeholder span {
   font-size: 1rem;
   color: var(--text-secondary);
+}
+
+.project-badges {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  right: 0.75rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  justify-content: center;
+  z-index: 2;
+}
+
+.project-badge {
+  max-width: 100%;
+  padding: 0.28rem 0.5rem;
+  border-radius: 999px;
+  background: rgba(18, 18, 18, 0.78);
+  border: 1px solid rgba(255, 202, 40, 0.45);
+  color: var(--secondary);
+  font-size: 0.68rem;
+  font-weight: 600;
+  line-height: 1;
+  white-space: nowrap;
 }
 
 .proj-card:hover .proj-img { 
@@ -174,7 +205,7 @@
   transform: scale(1.1);
 }
 
-.proj-card div { 
+.proj-content {
   padding: 1.5rem; 
   flex-grow: 1;
   display: flex;
@@ -226,6 +257,17 @@
   transform: translateY(-5px);
 }
 
+.ai-skill-category {
+  border: 1px solid rgba(255, 202, 40, 0.25);
+  background:
+    linear-gradient(135deg, rgba(144, 202, 249, 0.08), rgba(255, 202, 40, 0.08)),
+    var(--accent-bg);
+}
+
+.ai-skill-category .skills-list {
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
 .skill-category h3 {
   color: var(--secondary);
   margin-bottom: 1.5rem;
@@ -254,6 +296,9 @@
   gap: 0.7rem;
   transition: all 0.3s;
   justify-content: flex-start;
+  line-height: 1.35;
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 
 .skill-item:hover {
@@ -263,6 +308,7 @@
 }
 
 .skill-item i {
+  flex: 0 0 24px;
   color: var(--primary);
   font-size: 1.2rem;
   width: 24px;
@@ -547,7 +593,9 @@
 }
 
 .modal-content {
-  background: var(--card-bg);
+  background:
+    linear-gradient(135deg, rgba(144, 202, 249, 0.08), transparent 38%),
+    var(--card-bg);
   width: 90%;
   max-width: 800px;
   border-radius: 12px;
@@ -566,6 +614,7 @@
   top: 20px;
   right: 20px;
   background: var(--accent-bg);
+  border: 0;
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -583,6 +632,11 @@
   background: var(--secondary);
   color: #121212;
   transform: rotate(90deg);
+}
+
+.modal-close:focus-visible {
+  outline: 3px solid var(--primary);
+  outline-offset: 3px;
 }
 
 .modal-body {
@@ -613,6 +667,10 @@
 
 .modal-section {
   margin-bottom: 2rem;
+  padding: 1rem;
+  border: 1px solid rgba(144, 202, 249, 0.14);
+  border-radius: 10px;
+  background: rgba(42, 42, 42, 0.45);
 }
 
 .modal-section-title {
@@ -630,4 +688,8 @@
 .modal-feature-list {
   padding-left: 1.5rem;
   color: var(--text-secondary);
+}
+
+.modal-feature-list li {
+  margin-bottom: 0.55rem;
 }
