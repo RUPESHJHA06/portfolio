@@ -66,9 +66,17 @@
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
+
+  .hero-tags {
+    gap: 0.6rem;
+  }
   
   .skills-list {
     grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  }
+
+  .ai-skill-category .skills-list {
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
   }
   
   /* Back to top button positioning */
@@ -77,6 +85,17 @@
     right: 20px;
     width: 45px;
     height: 45px;
+  }
+
+  .modal-header {
+    grid-template-columns: 1fr;
+    padding-right: 2.5rem;
+  }
+
+  .modal-icon {
+    width: 56px;
+    height: 56px;
+    font-size: 1.55rem;
   }
 }
 
@@ -99,6 +118,11 @@
   
   header p {
     font-size: 1rem;
+  }
+
+  .hero-tags span {
+    font-size: 0.85rem;
+    padding: 0.5rem 0.7rem;
   }
   
   section h2 {
@@ -128,5 +152,17 @@
   
   .skills-list {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .ai-skill-category .skills-list {
+    grid-template-columns: 1fr;
+  }
+
+  .modal-body {
+    padding: 1.5rem;
+  }
+
+  .modal-links .proj-link {
+    width: 100%;
   }
 }

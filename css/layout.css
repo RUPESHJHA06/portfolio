@@ -122,6 +122,30 @@ header p {
   margin-top: 1.5rem;
 }
 
+.hero-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.8rem;
+  margin-top: 1.2rem;
+}
+
+.hero-tags span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.55rem 0.85rem;
+  border: 1px solid rgba(144, 202, 249, 0.35);
+  border-radius: 999px;
+  background: rgba(30, 30, 30, 0.72);
+  color: var(--text-primary);
+  font-size: 0.92rem;
+}
+
+.hero-tags i {
+  color: var(--secondary);
+}
+
 .btn {
   padding: 0.8rem 1.5rem;
   border-radius: 50px;
